@@ -1,0 +1,13 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/mahonghui/CLionProjects/AmNet
+-- BUILD_TYPE: Debug
+-- CXXFLAGS: -std=c++11 -Wall -O0 -g -ggdb
+-- Configuring done
+CMake Error at CMakeLists.txt:59 (add_library):
+  No SOURCES given to target: AmNet_static
+
+
+CMake Error at CMakeLists.txt:50 (add_library):
+  No SOURCES given to target: AmNet_shared
+
+
+-- Build files have been written to: /Users/mahonghui/CLionProjects/AmNet/cmake-build-debug

@@ -1,0 +1,3 @@
+/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/CMakeFiles/AmNet.dir
