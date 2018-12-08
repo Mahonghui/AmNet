@@ -9,14 +9,14 @@
 #include <functional>
 #include "timestamp.h"
 
-class eventbase{
+class EventBase{
 public:
     // 类似闭包函数，包装好的函数赋给一个变量
     using callback = std::function<void()>;
     using read_callback = std::function<void (TimeStamp)>;
 
-    eventbase(int fd);
-    ~eventbase();
+    EventBase(int fd);
+    ~EventBase();
 
     // 关联读写事件
     void Readable(){
