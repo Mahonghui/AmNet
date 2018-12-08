@@ -1,7 +1,6 @@
 AmNet is a multi-thread http server based on Reactor pattern.
 It utils network libs and IO multiplex tech in C++ to provide high performance.
 
-A
 **Feature**
 
 - 使用epoll的LT模式实现非阻塞式的IO复用
@@ -12,6 +11,6 @@ A
 
 - 使用HTTP有限状态机解析HTTP请求，支持HTTP长连接
 
-- HTTP服务器支持URL路由分发以及静态资源访问，可接入RESTful架构
+- HTTP服务器支持URL路由分发以及静态资源访问
 
   
