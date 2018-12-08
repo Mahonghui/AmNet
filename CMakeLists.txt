@@ -7,6 +7,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # 设置编译器
+
 set(CMAKE_CXX_COMPILER "g++")
 # 开启所有警告
 set(CMAKE_CXX_FLAGS "-std=c++11 -Wall")
@@ -47,7 +48,7 @@ foreach(SUB_DIR ${SRC_DIR})
 endforeach()
 
 # 打包源文件至动态库
-add_library(${CMAKE_PROJECT_NAME}_shared SHARED ${SUB_LIST})
+add_library(${CMAKE_PROJECT_NAME}_shared SHARED ${SUB_LIST} src/net/epollor.h src/net/epollor.cpp src/base/timestamp.h src/base/util.h src/base/util.cpp)
 # 链接用到的库
 target_link_libraries(${CMAKE_PROJECT_NAME}_shared pthread)
 # 修改动态库的名称
