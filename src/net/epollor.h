@@ -15,8 +15,8 @@ class EventBase;
 
 class Epollor{
 public:
-    Epollor(){};
-    ~Epollor(){};
+    Epollor();
+    ~Epollor();
 
     // 注册，修改，删除事件
     void Add(std::shared_ptr<EventBase> eb);
