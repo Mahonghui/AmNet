@@ -15,11 +15,14 @@ const int MAX_BUF_SIZE = 1000*1024;
 
 template <int SIZE>
 class Buffer{
+
 public:
-    Buffer():cur_(data_){}
+    Buffer(){
+        cur_ = data_;
+    }
 
     void Append(const char* buf, size_t len){
-        if(GetAvail() > static_cast<int>len)
+        if(GetAvail() > static_cast<int>(len))
         {
             memcpy(cur_, buf, len);
             Seekp(len);

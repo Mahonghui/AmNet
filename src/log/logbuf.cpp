@@ -96,7 +96,7 @@ LogStream& LogStream::operator<<(const char* str) {
 }
 
 LogStream& LogStream::operator<<(std::string & str) {
-    if(str.size())
+    if(!str.empty())
         buffer_.Append(str.c_str(), str.size());
     else
         buffer_.Append("NULL", 4);
