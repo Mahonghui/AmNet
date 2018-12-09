@@ -38,6 +38,7 @@ private:
     LogLevel level_;
     const char* logfile_;
     int line_;
+
 };
 
 #endif //AMNET_LOGGER_H
