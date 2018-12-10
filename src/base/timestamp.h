@@ -9,12 +9,12 @@
 
 using std::chrono::system_clock;
 
-using Nanosecond    = std::chrono::nanosecond;
-using Microsecond   = std::chrono::microsecond;
-using Millisecond   = std::chrono::millisecond;
-using Second        = std::chrono::second;
-using Minute        = std::chrono::minute;
-using Hour          = std::chrono::hour;
+using Nanosecond    = std::chrono::nanoseconds;
+using Microsecond   = std::chrono::microseconds;
+using Millisecond   = std::chrono::milliseconds;
+using Second        = std::chrono::seconds;
+using Minute        = std::chrono::minutes;
+using Hour          = std::chrono::hours;
 
 using TimeStamp     = std::chrono::time_point<system_clock, Nanosecond >;
 
