@@ -6,7 +6,7 @@
 #include "logger.h"
 
 EventBase::EventBase(int fd):fd_(fd), events_(EPOLLRDHUP), retevent_(0){}
-EventBase::~EventBase() {}
+EventBase::~EventBase(){}
 
 void EventBase::EventHanlder() {
 

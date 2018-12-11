@@ -12,12 +12,12 @@
 Looper::Looper():
 exit_(false),
 is_handling_task_(false),
-wakeip_fd_(eventfd(0, EFD_NONBLOCK| EFD_CLOEXEC)),
-wakeup_eventbase_(std::make_shared<EventBase>(wakeip_fd_)),
+wakeup_fd_(eventfd(0, EFD_NONBLOCK| EFD_CLOEXEC)),
+wakeup_eventbase_(std::make_shared<EventBase>(wakeup_fd_)),
 thread_id_(std::this_thread::get_id()),
 timer_queue_(new TimerQueue(this))
 {
-    if(wakeip_fd_ < 0)
+    if(wakeup_fd_ < 0)
         LOG_FATAL<<"fail to create wakeup_fd_";
     // 监视可读事件
     wakeup_eventbase_->SetReadableCallback(std::bind(&Looper::HandleWakeup, this));
@@ -44,7 +44,7 @@ void Looper::Start() {
 
 void Looper::Wakeup() {
     uint64_t on = 1;
-    ssize_t n = write(wakeip_fd_, &on, sizeof(on));
+    ssize_t n = write(wakeup_fd_, &on, sizeof(on));
     if(n != sizeof(on))
     {
         LOG_ERROR << "wake up error in write()";
@@ -53,14 +53,14 @@ void Looper::Wakeup() {
 
 void Looper::HandleWakeup() {
     uint64_t on = 1;
-    ssize_t n = read(wakeip_fd_, &on, sizeof(on));
+    ssize_t n = read(wakeup_fd_, &on, sizeof(on));
     if(n != sizeof(on))
         LOG_ERROR<<"handle wake up error in read()";
 }
 
 void Looper::RunTask(Looper::Task &&t) {
     if(IsInBaseThread())
-        task();
+        Task();
     else
         AddTask(std::move(t));
 }
@@ -84,8 +84,11 @@ void Looper::HandleTask() {
         tasks.swap(task_queue_);
     }
 
-    for(size_t i=0; i<tasks.size(); ++i)
-        tasks[i]();
+//    for(size_t i=0; i<tasks.size(); ++i)
+//        tasks[i]();
+
+    for(auto& task: tasks)
+        task();
 
     is_handling_task_ = false;
 }

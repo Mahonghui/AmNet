@@ -48,7 +48,7 @@ public:
 private:
     bool exit_;
     bool is_handling_task_;
-    int wakeip_fd_;
+    int wakeup_fd_;
     std::shared_ptr<EventBase> wakeup_eventbase_;
 
     const std::thread::id thread_id_;
