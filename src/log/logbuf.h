@@ -35,14 +35,14 @@ public:
 
     void Clear(){bzero(data_,sizeof(data_));}
 
-    void Reset(){cur_ = data;}
+    void Reset(){cur_ = data_;}
 
     const char* GetData() const { return data_;}
-    int GetLen()const { return static_cast<int>(cur_ - data);}
+    int GetLen()const { return static_cast<int>(cur_ - data_);}
 
     char* GetCur(){ return cur_;}
 
-    int GetAvail()const { return static_cast<int>(GetEnd() - cur_);}
+    int GetAvail()const { return static_cast<int>(getEnd() - cur_);}
 
 private:
     const char* getEnd()const { return data_+ sizeof(data_);}
