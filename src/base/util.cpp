@@ -68,10 +68,10 @@ int util::Accept(int lfd, struct sockaddr_in *addr) {
             case ENOMEM:
             case ENOTSOCK:
             case EOPNOTSUPP:
-                LOG_FAIL<<"Unexpected error"<<saved_erron;
+                LOG_FATAL<<"Unexpected error"<<saved_erron;
                 break;
             default:
-                LOG_FAIL<<"Unknown error"<<saved_erron;
+                LOG_FATAL<<"Unknown error"<<saved_erron;
                 break;
         }
     }
