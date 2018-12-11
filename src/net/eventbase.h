@@ -15,7 +15,7 @@ public:
     using callback = std::function<void()>;
     using read_callback = std::function<void (TimeStamp)>;
 
-    EventBase(int fd);
+    explicit EventBase(int fd);
     ~EventBase();
 
     // 关联读写事件
@@ -49,7 +49,7 @@ public:
     // getter
     int getFd() const { return  fd_;}
     int getEvents(){ return events_;}
-    bool isWriting() const { return events_&EPOLLOUT;}
+    bool isWriting() const { return (bool)events_ & EPOLLOUT;}
 
 private:
     const int fd_;

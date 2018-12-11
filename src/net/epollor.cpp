@@ -55,15 +55,15 @@ void Epollor::Mod(std::shared_ptr <EventBase> eb) {
 
 void Epollor::Del(std::shared_ptr <EventBase> eb) {
     int fd = eb->getFd();
-    struct epoll_event event();
-    event.events = eb->getEvents();
+    struct epoll_event event;
+    event.events = (uint32_t)eb->getEvents();
     event.data.fd = fd;
 
     if(epoll_ctl(epoll_fd_, EPOLL_CTL_DEL, fd, &event) < 0)
     {
         LOG_ERROR<< "fail to invoke epoll_ctl[DEL]";
     }
-    fd2eb.earse(fd);
+    fd2eb.erase(fd);
 }
 
 std::vector<std::shared_ptr<EventBase>> Epollor::Poll() {
