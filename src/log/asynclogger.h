@@ -16,7 +16,7 @@
 //异步处理日志
 class AsyncLogger{
 public:
-    explicit  AsyncLogger(const std::string logfile, int flush_interval = 2);
+    explicit  AsyncLogger(const std::string& logfile, int flush_interval = 2);
     ~AsyncLogger(){
         if(is_running_)
             Stop();

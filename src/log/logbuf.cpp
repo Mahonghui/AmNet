@@ -42,8 +42,8 @@ void LogStream::ParseInt(T v){
     }
 }
 
-LogStream& LogStream::operator<<(bool b) {
-    buffer_.Append(v?'1':'0', 1);
+LogStream& LogStream::operator<<(bool v) {
+    buffer_.Append(v?"1":"0", 1);
     return *this;
 }
 

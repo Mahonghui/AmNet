@@ -11,7 +11,8 @@
 
 class Timer{
 public:
-    Timer(const std::function<void()> cb, TimeStamp when):callback_(cb), when_(when){}
+    Timer(const std::function<void()> cb, TimeStamp when):callback_(cb), when_(when){
+    }
 
     void Run()const {callback_();}
     TimeStamp GetExpireTime() const{ return when_;}

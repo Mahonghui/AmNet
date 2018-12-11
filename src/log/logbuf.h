@@ -17,8 +17,7 @@ template <int SIZE>
 class Buffer{
 
 public:
-    Buffer(){
-        cur_ = data_;
+    Buffer():cur_(data_){
     }
 
     void Append(const char* buf, size_t len){

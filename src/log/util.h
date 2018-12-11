@@ -9,7 +9,7 @@
 
 class File{
 public:
-    explicit File(const std::string filename);
+    explicit File(const std::string& filename);
     ~File();
 
     void Append(const char* str, size_t len);

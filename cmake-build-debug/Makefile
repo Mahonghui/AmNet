@@ -39,27 +39,51 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mahonghui/CLionProjects/AmNet
+CMAKE_SOURCE_DIR = /home/amisher/AmNet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mahonghui/CLionProjects/AmNet/cmake-build-debug
+CMAKE_BINARY_DIR = /home/amisher/AmNet/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +94,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,11 +102,33 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/amisher/Downloads/clion-2018.3.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/CMakeFiles /Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amisher/AmNet/cmake-build-debug/CMakeFiles /home/amisher/AmNet/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amisher/AmNet/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +157,360 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named AmNet
+# Target rules for targets named AmNet_shared
 
 # Build rule for target.
-AmNet: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 AmNet
-.PHONY : AmNet
+AmNet_shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AmNet_shared
+.PHONY : AmNet_shared
 
 # fast build rule for target.
-AmNet/fast:
-	$(MAKE) -f CMakeFiles/AmNet.dir/build.make CMakeFiles/AmNet.dir/build
-.PHONY : AmNet/fast
+AmNet_shared/fast:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/build
+.PHONY : AmNet_shared/fast
 
-library.o: library.cpp.o
+#=============================================================================
+# Target rules for targets named AmNet_static
 
-.PHONY : library.o
+# Build rule for target.
+AmNet_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AmNet_static
+.PHONY : AmNet_static
+
+# fast build rule for target.
+AmNet_static/fast:
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/build
+.PHONY : AmNet_static/fast
+
+src/base/util.o: src/base/util.cpp.o
+
+.PHONY : src/base/util.o
 
 # target to build an object file
-library.cpp.o:
-	$(MAKE) -f CMakeFiles/AmNet.dir/build.make CMakeFiles/AmNet.dir/library.cpp.o
-.PHONY : library.cpp.o
+src/base/util.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/base/util.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/base/util.cpp.o
+.PHONY : src/base/util.cpp.o
 
-library.i: library.cpp.i
+src/base/util.i: src/base/util.cpp.i
 
-.PHONY : library.i
+.PHONY : src/base/util.i
 
 # target to preprocess a source file
-library.cpp.i:
-	$(MAKE) -f CMakeFiles/AmNet.dir/build.make CMakeFiles/AmNet.dir/library.cpp.i
-.PHONY : library.cpp.i
+src/base/util.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/base/util.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/base/util.cpp.i
+.PHONY : src/base/util.cpp.i
 
-library.s: library.cpp.s
+src/base/util.s: src/base/util.cpp.s
 
-.PHONY : library.s
+.PHONY : src/base/util.s
 
 # target to generate assembly for a file
-library.cpp.s:
-	$(MAKE) -f CMakeFiles/AmNet.dir/build.make CMakeFiles/AmNet.dir/library.cpp.s
-.PHONY : library.cpp.s
+src/base/util.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/base/util.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/base/util.cpp.s
+.PHONY : src/base/util.cpp.s
+
+src/log/asynclogger.o: src/log/asynclogger.cpp.o
+
+.PHONY : src/log/asynclogger.o
+
+# target to build an object file
+src/log/asynclogger.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/asynclogger.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.o
+.PHONY : src/log/asynclogger.cpp.o
+
+src/log/asynclogger.i: src/log/asynclogger.cpp.i
+
+.PHONY : src/log/asynclogger.i
+
+# target to preprocess a source file
+src/log/asynclogger.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/asynclogger.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.i
+.PHONY : src/log/asynclogger.cpp.i
+
+src/log/asynclogger.s: src/log/asynclogger.cpp.s
+
+.PHONY : src/log/asynclogger.s
+
+# target to generate assembly for a file
+src/log/asynclogger.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/asynclogger.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.s
+.PHONY : src/log/asynclogger.cpp.s
+
+src/log/logbuf.o: src/log/logbuf.cpp.o
+
+.PHONY : src/log/logbuf.o
+
+# target to build an object file
+src/log/logbuf.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logbuf.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.o
+.PHONY : src/log/logbuf.cpp.o
+
+src/log/logbuf.i: src/log/logbuf.cpp.i
+
+.PHONY : src/log/logbuf.i
+
+# target to preprocess a source file
+src/log/logbuf.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logbuf.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.i
+.PHONY : src/log/logbuf.cpp.i
+
+src/log/logbuf.s: src/log/logbuf.cpp.s
+
+.PHONY : src/log/logbuf.s
+
+# target to generate assembly for a file
+src/log/logbuf.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logbuf.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.s
+.PHONY : src/log/logbuf.cpp.s
+
+src/log/logfile.o: src/log/logfile.cpp.o
+
+.PHONY : src/log/logfile.o
+
+# target to build an object file
+src/log/logfile.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logfile.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.o
+.PHONY : src/log/logfile.cpp.o
+
+src/log/logfile.i: src/log/logfile.cpp.i
+
+.PHONY : src/log/logfile.i
+
+# target to preprocess a source file
+src/log/logfile.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logfile.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.i
+.PHONY : src/log/logfile.cpp.i
+
+src/log/logfile.s: src/log/logfile.cpp.s
+
+.PHONY : src/log/logfile.s
+
+# target to generate assembly for a file
+src/log/logfile.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logfile.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.s
+.PHONY : src/log/logfile.cpp.s
+
+src/log/logger.o: src/log/logger.cpp.o
+
+.PHONY : src/log/logger.o
+
+# target to build an object file
+src/log/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logger.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logger.cpp.o
+.PHONY : src/log/logger.cpp.o
+
+src/log/logger.i: src/log/logger.cpp.i
+
+.PHONY : src/log/logger.i
+
+# target to preprocess a source file
+src/log/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logger.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logger.cpp.i
+.PHONY : src/log/logger.cpp.i
+
+src/log/logger.s: src/log/logger.cpp.s
+
+.PHONY : src/log/logger.s
+
+# target to generate assembly for a file
+src/log/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/logger.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/logger.cpp.s
+.PHONY : src/log/logger.cpp.s
+
+src/log/util.o: src/log/util.cpp.o
+
+.PHONY : src/log/util.o
+
+# target to build an object file
+src/log/util.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/util.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/util.cpp.o
+.PHONY : src/log/util.cpp.o
+
+src/log/util.i: src/log/util.cpp.i
+
+.PHONY : src/log/util.i
+
+# target to preprocess a source file
+src/log/util.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/util.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/util.cpp.i
+.PHONY : src/log/util.cpp.i
+
+src/log/util.s: src/log/util.cpp.s
+
+.PHONY : src/log/util.s
+
+# target to generate assembly for a file
+src/log/util.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/log/util.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/log/util.cpp.s
+.PHONY : src/log/util.cpp.s
+
+src/net/epollor.o: src/net/epollor.cpp.o
+
+.PHONY : src/net/epollor.o
+
+# target to build an object file
+src/net/epollor.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/epollor.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.o
+.PHONY : src/net/epollor.cpp.o
+
+src/net/epollor.i: src/net/epollor.cpp.i
+
+.PHONY : src/net/epollor.i
+
+# target to preprocess a source file
+src/net/epollor.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/epollor.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.i
+.PHONY : src/net/epollor.cpp.i
+
+src/net/epollor.s: src/net/epollor.cpp.s
+
+.PHONY : src/net/epollor.s
+
+# target to generate assembly for a file
+src/net/epollor.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/epollor.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.s
+.PHONY : src/net/epollor.cpp.s
+
+src/net/eventbase.o: src/net/eventbase.cpp.o
+
+.PHONY : src/net/eventbase.o
+
+# target to build an object file
+src/net/eventbase.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/eventbase.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.o
+.PHONY : src/net/eventbase.cpp.o
+
+src/net/eventbase.i: src/net/eventbase.cpp.i
+
+.PHONY : src/net/eventbase.i
+
+# target to preprocess a source file
+src/net/eventbase.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/eventbase.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.i
+.PHONY : src/net/eventbase.cpp.i
+
+src/net/eventbase.s: src/net/eventbase.cpp.s
+
+.PHONY : src/net/eventbase.s
+
+# target to generate assembly for a file
+src/net/eventbase.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/eventbase.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.s
+.PHONY : src/net/eventbase.cpp.s
+
+src/net/iobuffer.o: src/net/iobuffer.cpp.o
+
+.PHONY : src/net/iobuffer.o
+
+# target to build an object file
+src/net/iobuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/iobuffer.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.o
+.PHONY : src/net/iobuffer.cpp.o
+
+src/net/iobuffer.i: src/net/iobuffer.cpp.i
+
+.PHONY : src/net/iobuffer.i
+
+# target to preprocess a source file
+src/net/iobuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/iobuffer.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.i
+.PHONY : src/net/iobuffer.cpp.i
+
+src/net/iobuffer.s: src/net/iobuffer.cpp.s
+
+.PHONY : src/net/iobuffer.s
+
+# target to generate assembly for a file
+src/net/iobuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/iobuffer.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.s
+.PHONY : src/net/iobuffer.cpp.s
+
+src/net/loop.o: src/net/loop.cpp.o
+
+.PHONY : src/net/loop.o
+
+# target to build an object file
+src/net/loop.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/loop.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/loop.cpp.o
+.PHONY : src/net/loop.cpp.o
+
+src/net/loop.i: src/net/loop.cpp.i
+
+.PHONY : src/net/loop.i
+
+# target to preprocess a source file
+src/net/loop.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/loop.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/loop.cpp.i
+.PHONY : src/net/loop.cpp.i
+
+src/net/loop.s: src/net/loop.cpp.s
+
+.PHONY : src/net/loop.s
+
+# target to generate assembly for a file
+src/net/loop.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/loop.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/loop.cpp.s
+.PHONY : src/net/loop.cpp.s
+
+src/net/timerqueue.o: src/net/timerqueue.cpp.o
+
+.PHONY : src/net/timerqueue.o
+
+# target to build an object file
+src/net/timerqueue.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/timerqueue.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.o
+.PHONY : src/net/timerqueue.cpp.o
+
+src/net/timerqueue.i: src/net/timerqueue.cpp.i
+
+.PHONY : src/net/timerqueue.i
+
+# target to preprocess a source file
+src/net/timerqueue.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/timerqueue.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.i
+.PHONY : src/net/timerqueue.cpp.i
+
+src/net/timerqueue.s: src/net/timerqueue.cpp.s
+
+.PHONY : src/net/timerqueue.s
+
+# target to generate assembly for a file
+src/net/timerqueue.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/net/timerqueue.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.s
+.PHONY : src/net/timerqueue.cpp.s
 
 # Help Target
 help:
@@ -156,12 +518,47 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... AmNet_shared"
 	@echo "... rebuild_cache"
+	@echo "... AmNet_static"
 	@echo "... edit_cache"
-	@echo "... AmNet"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... src/base/util.o"
+	@echo "... src/base/util.i"
+	@echo "... src/base/util.s"
+	@echo "... src/log/asynclogger.o"
+	@echo "... src/log/asynclogger.i"
+	@echo "... src/log/asynclogger.s"
+	@echo "... src/log/logbuf.o"
+	@echo "... src/log/logbuf.i"
+	@echo "... src/log/logbuf.s"
+	@echo "... src/log/logfile.o"
+	@echo "... src/log/logfile.i"
+	@echo "... src/log/logfile.s"
+	@echo "... src/log/logger.o"
+	@echo "... src/log/logger.i"
+	@echo "... src/log/logger.s"
+	@echo "... src/log/util.o"
+	@echo "... src/log/util.i"
+	@echo "... src/log/util.s"
+	@echo "... src/net/epollor.o"
+	@echo "... src/net/epollor.i"
+	@echo "... src/net/epollor.s"
+	@echo "... src/net/eventbase.o"
+	@echo "... src/net/eventbase.i"
+	@echo "... src/net/eventbase.s"
+	@echo "... src/net/iobuffer.o"
+	@echo "... src/net/iobuffer.i"
+	@echo "... src/net/iobuffer.s"
+	@echo "... src/net/loop.o"
+	@echo "... src/net/loop.i"
+	@echo "... src/net/loop.s"
+	@echo "... src/net/timerqueue.o"
+	@echo "... src/net/timerqueue.i"
+	@echo "... src/net/timerqueue.s"
 .PHONY : help
 
 

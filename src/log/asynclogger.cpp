@@ -9,7 +9,7 @@
 #include "asynclogger.h"
 #include "logfile.h"
 
-AsyncLogger::AsyncLogger(const std::string logfile, int flush_interval):
+AsyncLogger::AsyncLogger(const std::string& logfile, int flush_interval):
 flush_interval_(flush_interval),
 is_running_(false),
 logfile_(logfile),
@@ -69,7 +69,7 @@ void AsyncLogger::ThreadFunc() {
             }
 
             buffers_.push_back(cur_buffer_);
-            cur_buffer_.reset()();
+            cur_buffer_.reset();
             cur_buffer_ = std::move(back_buffer1);
 
             // 把buffers 和专门读取的vector交换

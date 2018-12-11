@@ -6,10 +6,10 @@
 #include <stdio.h>
 #include "util.h"
 
-File::File(const std::string filename){
+File::File(const std::string& filename){
     if((fp_ = fopen(filename.c_str(), "ae")) == nullptr)
         printf("fail to open logfile: %d[%s]", errno, strerror(errno));
-    std::setvbuf(fp_, buf_);
+    setbuffer(fp_, buf_, sizeof(buf_));
 }
 
 File::~File() {
@@ -18,6 +18,7 @@ File::~File() {
 
 void File::Append(const char *str, size_t len) {
     size_t  n = Write(str, len);
+    // 数据一次可能写不完
     size_t remain = len - n;
     while (remain>0)
     {
@@ -41,5 +42,5 @@ void File::Flush() {
 
 size_t File::Write(const char *str, size_t len) {
     // 只使用一个log线记录日志，因此不要求线程安全性
-    return fwrite_unlocked(str,1,len, fp);
+    return fwrite_unlocked(str,1,len, fp_);
 }

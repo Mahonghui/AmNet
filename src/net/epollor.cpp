@@ -1,10 +1,12 @@
 //
 // Created by amisher on 18-12-8.
 //
-#include "eventbase.h"
-#include "epollor.h"
+
 #include "util.h"
 #include "logger.h"
+#include "eventbase.h"
+#include "epollor.h"
+
 
 // 监听事件上限
 const int EVENTS_MAX = 4096;
@@ -68,7 +70,8 @@ void Epollor::Del(std::shared_ptr <EventBase> eb) {
 
 std::vector<std::shared_ptr<EventBase>> Epollor::Poll() {
     // active_event中接受活跃的epoll_event
-    int active_event_count = spoll_wait(epoll_fd_, &*active_event_.begin(), active_event_.size(), EPOLL_WAIT_TIME);
+    int active_event_count = epoll_wait(epoll_fd_, &*active_event_.begin(),
+            (int)(active_event_.size()), EPOLL_WAIT_TIME);
 
     if(active_event_count<0)
     {

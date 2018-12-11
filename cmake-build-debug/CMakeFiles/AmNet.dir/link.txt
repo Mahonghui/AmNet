@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++ -g -dynamiclib -Wl,-headerpad_max_install_names  -o libAmNet.dylib -install_name @rpath/libAmNet.dylib CMakeFiles/AmNet.dir/library.cpp.o 

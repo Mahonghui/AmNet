@@ -44,7 +44,7 @@ private:
 #define LOG_DEBUG if (Logger::GetGlobalLevel() == Logger::DBBUG) Logger(__FILE__, __LINE__, Logger::DEBUG, __func__).GetLogStream()
 #define LOG_INFO if (Logger::GetGlobalLevel() <= Logger::INFO) Logger(__FILE__, __LINE__, Logger::INFO, __func__).GetLogStream()
 #define LOG_WARN Logger(__FILE__, __LINE__, Logger::WARN, __func__).GetLogStream()
-#define LOG_ERROR Logger(__FILE__, __LINE__, Logger::ERRPR, __func__).GetLogStream()
+#define LOG_ERROR Logger(__FILE__, __LINE__, Logger::ERROR, __func__).GetLogStream()
 #define LOG_FATAL Logger(__FILE__, __LINE__, Logger::FATAL, __func__).GetLogStream()
 
 #endif //AMNET_LOGGER_H

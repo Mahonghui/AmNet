@@ -3,7 +3,7 @@
 //
 
 #include "eventbase.h"
-#include "log.h"
+#include "logger.h"
 
 EventBase::EventBase(int fd):fd_(fd), events_(EPOLLRDHUP), retevent_(0){}
 EventBase::~EventBase() {}
@@ -27,7 +27,7 @@ void EventBase::EventHanlder() {
     }
 
     //出错
-    if(retevent_ & EPOLLEER )
+    if(retevent_ & EPOLLERR )
     {
         if(error_callback_)
             error_callback_();

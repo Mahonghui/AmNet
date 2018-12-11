@@ -26,7 +26,7 @@ timer_queue_(new TimerQueue(this))
     AddEventBase(wakeup_eventbase_);
 }
 
-Looper::~Looper()=default {}
+Looper::~Looper()=default;
 
 void Looper::Start() {
     std::vector<std::shared_ptr<EventBase>> active_eb_list;
