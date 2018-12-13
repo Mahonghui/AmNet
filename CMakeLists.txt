@@ -48,7 +48,7 @@ foreach(SUB_DIR ${SRC_DIR})
 endforeach()
 
 # 打包源文件至动态库
-add_library(${CMAKE_PROJECT_NAME}_shared SHARED ${SUB_LIST} src/net/epollor.h src/net/epollor.cpp src/base/timestamp.h src/base/util.h src/base/util.cpp src/log/logbuf.h src/log/logbuf.cpp src/log/logger.h src/log/logger.cpp src/log/asynclogger.h src/log/util.h src/log/util.cpp src/log/logfile.h src/log/logfile.cpp src/log/asynclogger.cpp src/net/iobuffer.h src/net/iobuffer.cpp src/net/timer.h src/net/loop.h src/net/timerqueue.h src/net/timerqueue.cpp src/net/loop.cpp)
+add_library(${CMAKE_PROJECT_NAME}_shared SHARED ${SUB_LIST} src/net/epollor.h src/net/epollor.cpp src/base/timestamp.h src/base/util.h src/base/util.cpp src/log/logbuf.h src/log/logbuf.cpp src/log/logger.h src/log/logger.cpp src/log/asynclogger.h src/log/util.h src/log/util.cpp src/log/logfile.h src/log/logfile.cpp src/log/asynclogger.cpp src/net/iobuffer.h src/net/iobuffer.cpp src/net/timer.h src/net/loop.h src/net/timerqueue.h src/net/timerqueue.cpp src/net/loop.cpp src/net/loopthread.h src/net/loopthread.cpp src/base/anyone.h src/net/connection.h src/net/connection.cpp src/net/threadpool.h src/net/threadpool.cpp)
 # 链接用到的库
 target_link_libraries(${CMAKE_PROJECT_NAME}_shared pthread)
 # 修改动态库的名称
