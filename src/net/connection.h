@@ -40,7 +40,7 @@ public:
 
     // 设置回调
     void SetConnCallback(const Callback& cb){conn_cb_ = cb;}
-    void SetMsgCallback(const Callback& cb){msg_cb_ = cb;}
+    void SetMsgCallback(const MessageCallback & cb){msg_cb_ = cb;}
     void SetReplyCallback(const Callback& cb){reply_cb_ = cb;}
     void SetCloseCallback(const Callback& cb){close_cb_ = cb;}
     void SetSuicideCallback(const Callback& cb){suicide_cb_ = cb;}
