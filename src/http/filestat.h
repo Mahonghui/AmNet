@@ -17,10 +17,10 @@ class IOBuffer;
 
 class FileStat{
 public:
-    FileStat(std::string path):path_(path){}
+    explicit FileStat(std::string& path);
     ~FileStat() = default;
 
-    bool Exist();
+    bool Exist () const;
     bool isFile();
     bool isDir();
     bool isLink();
