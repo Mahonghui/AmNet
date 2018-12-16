@@ -9,6 +9,7 @@
 #include "iobuffer.h"
 
 class HttpResponse{
+public:
     enum HttpStatusCode{
         OK=200,
         MOVED_PERMANENTLY=301,
