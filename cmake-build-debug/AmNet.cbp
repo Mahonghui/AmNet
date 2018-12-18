@@ -186,6 +186,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/amisher/AmNet/src/base/anyone.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
 		<Unit filename="/home/amisher/AmNet/src/base/timestamp.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
@@ -194,6 +197,58 @@
 			<Option target="AmNet_static"/>
 		</Unit>
 		<Unit filename="/home/amisher/AmNet/src/base/util.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/filehandler.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/filehandler.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/filestat.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/filestat.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/httpparser.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/httpparser.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/httprequest.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/httpresponse.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/httpresponse.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/matcher.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/matcher.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/route.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/route.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/router.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/router.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
 		<Unit filename="/home/amisher/AmNet/src/log/asynclogger.cpp">
@@ -231,6 +286,13 @@
 		<Unit filename="/home/amisher/AmNet/src/log/util.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/connection.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/connection.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
 		<Unit filename="/home/amisher/AmNet/src/net/epollor.cpp">
 			<Option target="AmNet_shared"/>
 			<Option target="AmNet_static"/>
@@ -258,6 +320,27 @@
 			<Option target="AmNet_static"/>
 		</Unit>
 		<Unit filename="/home/amisher/AmNet/src/net/loop.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/loopthread.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/loopthread.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/server.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/server.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/threadpool.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/net/threadpool.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
 		<Unit filename="/home/amisher/AmNet/src/net/timer.h">
