@@ -17,7 +17,7 @@ public:
     FileHandler()= default;
     ~FileHandler()= default;
 
-    void setFilePrefix(std::string path){file_prefix_=path;}
+    void setFilePrefix(std::string& path){file_prefix_=path;}
 
     std::function<void(const HttpRequest&, std::unordered_map<std::string, std::string>&, HttpResponse* response)> GetHandler()
     {
