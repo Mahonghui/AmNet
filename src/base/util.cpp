@@ -19,8 +19,7 @@ int util::Create() {
 }
 
 void util::Bind(int fd, const struct sockaddr_in &addr) {
-    int ret = bind(fd, (
-    struct sockaddr*)&addr, sizeof(addr));
+    int ret = bind(fd, (struct sockaddr*)&addr, sizeof(addr));
 
     if(ret<0)
     {
@@ -128,7 +127,7 @@ TimeStamp util::StrfTime(struct timespec &ts) {
 }
 
 void util::ToUpperCase(std::string &str) {
-    std::transform(str.begin(), str.end(),str.back(),(int (*)(int)) toupper);
+    std::transform(str.begin(), str.end(),str.begin(),(int (*)(int)) toupper);
 }
 
 void util::ToLowerCase(std::string &str) {

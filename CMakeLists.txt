@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10)
 project(AmNet)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release")
@@ -48,7 +48,7 @@ foreach(SUB_DIR ${SRC_DIR})
 endforeach()
 
 # 打包源文件至动态库
-add_library(${CMAKE_PROJECT_NAME}_shared SHARED ${SUB_LIST} src/net/epollor.h src/net/epollor.cpp src/base/timestamp.h src/base/util.h src/base/util.cpp src/log/logbuf.h src/log/logbuf.cpp src/log/logger.h src/log/logger.cpp src/log/asynclogger.h src/log/util.h src/log/util.cpp src/log/logfile.h src/log/logfile.cpp src/log/asynclogger.cpp src/net/iobuffer.h src/net/iobuffer.cpp src/net/timer.h src/net/loop.h src/net/timerqueue.h src/net/timerqueue.cpp src/net/loop.cpp src/net/loopthread.h src/net/loopthread.cpp src/base/anyone.h src/net/connection.h src/net/connection.cpp src/net/threadpool.h src/net/threadpool.cpp src/net/server.h src/net/server.cpp src/http/httprequest.h src/http/httpresponse.h src/http/httpresponse.cpp src/http/httpparser.h src/http/httpparser.cpp src/http/filehandler.h src/http/filestat.h src/http/filestat.cpp src/http/filehandler.cpp src/http/matcher.h src/http/matcher.cpp src/http/route.h src/http/router.cpp src/http/router.h src/http/route.cpp)
+add_library(${CMAKE_PROJECT_NAME}_shared SHARED ${SUB_LIST} src/net/epollor.h src/net/epollor.cpp src/base/timestamp.h src/base/util.h src/base/util.cpp src/log/logbuf.h src/log/logbuf.cpp src/log/logger.h src/log/logger.cpp src/log/asynclogger.h src/log/util.h src/log/util.cpp src/log/logfile.h src/log/logfile.cpp src/log/asynclogger.cpp src/net/iobuffer.h src/net/iobuffer.cpp src/net/timer.h src/net/loop.h src/net/timerqueue.h src/net/timerqueue.cpp src/net/loop.cpp src/net/loopthread.h src/net/loopthread.cpp src/base/anyone.h src/net/connection.h src/net/connection.cpp src/net/threadpool.h src/net/threadpool.cpp src/net/server.h src/net/server.cpp src/http/httprequest.h src/http/httpresponse.h src/http/httpresponse.cpp src/http/httpparser.h src/http/httpparser.cpp src/http/filehandler.h src/http/filestat.h src/http/filestat.cpp src/http/filehandler.cpp src/http/matcher.h src/http/matcher.cpp src/http/route.h src/http/router.cpp src/http/router.h src/http/route.cpp src/http/httpserver.h src/http/httpserver.cpp)
 # 链接用到的库
 target_link_libraries(${CMAKE_PROJECT_NAME}_shared pthread)
 # 修改动态库的名称

@@ -12,7 +12,6 @@
 template <typename T>
 size_t Itoa(char buf[], T v){
     char* p = buf;
-    int res = 0;
     T n = v;
     if(n<0)
         n = -n;

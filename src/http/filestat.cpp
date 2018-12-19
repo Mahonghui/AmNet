@@ -87,12 +87,12 @@ std::string FileStat::GetName() {
 
 std::string FileStat::GetExtension() {
     std::string name = GetName();
-    unsigned long aux = name.find_last_of('.');
+    long int aux = name.find_last_of('.');
     if(aux == -1 || aux == (int)(name.length()-1))
         return "";
     else
     {
-        std::string ext = name.substr(aux+1);
+        std::string ext = name.substr((unsigned)aux+1);
         util::ToLowerCase(ext);
         return ext;
     }

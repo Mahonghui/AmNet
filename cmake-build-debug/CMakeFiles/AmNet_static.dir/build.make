@@ -122,9 +122,22 @@ CMakeFiles/AmNet_static.dir/src/http/httpresponse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AmNet_static.dir/src/http/httpresponse.cpp.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amisher/AmNet/src/http/httpresponse.cpp -o CMakeFiles/AmNet_static.dir/src/http/httpresponse.cpp.s
 
+CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
+CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.o: ../src/http/httpserver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.o -c /home/amisher/AmNet/src/http/httpserver.cpp
+
+CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amisher/AmNet/src/http/httpserver.cpp > CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.i
+
+CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amisher/AmNet/src/http/httpserver.cpp -o CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.s
+
 CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.o: ../src/http/matcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.o -c /home/amisher/AmNet/src/http/matcher.cpp
 
 CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/http/route.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/http/route.cpp.o: ../src/http/route.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AmNet_static.dir/src/http/route.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AmNet_static.dir/src/http/route.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/http/route.cpp.o -c /home/amisher/AmNet/src/http/route.cpp
 
 CMakeFiles/AmNet_static.dir/src/http/route.cpp.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/AmNet_static.dir/src/http/route.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/http/router.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/http/router.cpp.o: ../src/http/router.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AmNet_static.dir/src/http/router.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AmNet_static.dir/src/http/router.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/http/router.cpp.o -c /home/amisher/AmNet/src/http/router.cpp
 
 CMakeFiles/AmNet_static.dir/src/http/router.cpp.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/AmNet_static.dir/src/http/router.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.o: ../src/log/asynclogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.o -c /home/amisher/AmNet/src/log/asynclogger.cpp
 
 CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.i: cmake_force
@@ -176,7 +189,7 @@ CMakeFiles/AmNet_static.dir/src/log/asynclogger.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.o: ../src/log/logbuf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.o -c /home/amisher/AmNet/src/log/logbuf.cpp
 
 CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.i: cmake_force
@@ -189,7 +202,7 @@ CMakeFiles/AmNet_static.dir/src/log/logbuf.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.o: ../src/log/logfile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.o -c /home/amisher/AmNet/src/log/logfile.cpp
 
 CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.i: cmake_force
@@ -202,7 +215,7 @@ CMakeFiles/AmNet_static.dir/src/log/logfile.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/log/logger.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/log/logger.cpp.o: ../src/log/logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/logger.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/log/logger.cpp.o -c /home/amisher/AmNet/src/log/logger.cpp
 
 CMakeFiles/AmNet_static.dir/src/log/logger.cpp.i: cmake_force
@@ -215,7 +228,7 @@ CMakeFiles/AmNet_static.dir/src/log/logger.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/log/util.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/log/util.cpp.o: ../src/log/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/AmNet_static.dir/src/log/util.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/log/util.cpp.o -c /home/amisher/AmNet/src/log/util.cpp
 
 CMakeFiles/AmNet_static.dir/src/log/util.cpp.i: cmake_force
@@ -228,7 +241,7 @@ CMakeFiles/AmNet_static.dir/src/log/util.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/connection.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/connection.cpp.o: ../src/net/connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/connection.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/connection.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/connection.cpp.o -c /home/amisher/AmNet/src/net/connection.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/connection.cpp.i: cmake_force
@@ -241,7 +254,7 @@ CMakeFiles/AmNet_static.dir/src/net/connection.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.o: ../src/net/epollor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.o -c /home/amisher/AmNet/src/net/epollor.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.i: cmake_force
@@ -254,7 +267,7 @@ CMakeFiles/AmNet_static.dir/src/net/epollor.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.o: ../src/net/eventbase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.o -c /home/amisher/AmNet/src/net/eventbase.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.i: cmake_force
@@ -267,7 +280,7 @@ CMakeFiles/AmNet_static.dir/src/net/eventbase.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.o: ../src/net/iobuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.o -c /home/amisher/AmNet/src/net/iobuffer.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.i: cmake_force
@@ -280,7 +293,7 @@ CMakeFiles/AmNet_static.dir/src/net/iobuffer.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/loop.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/loop.cpp.o: ../src/net/loop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/loop.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/loop.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/loop.cpp.o -c /home/amisher/AmNet/src/net/loop.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/loop.cpp.i: cmake_force
@@ -293,7 +306,7 @@ CMakeFiles/AmNet_static.dir/src/net/loop.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/loopthread.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/loopthread.cpp.o: ../src/net/loopthread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/loopthread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/loopthread.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/loopthread.cpp.o -c /home/amisher/AmNet/src/net/loopthread.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/loopthread.cpp.i: cmake_force
@@ -306,7 +319,7 @@ CMakeFiles/AmNet_static.dir/src/net/loopthread.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/server.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/server.cpp.o: ../src/net/server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/server.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/server.cpp.o -c /home/amisher/AmNet/src/net/server.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/server.cpp.i: cmake_force
@@ -319,7 +332,7 @@ CMakeFiles/AmNet_static.dir/src/net/server.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.o: ../src/net/threadpool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.o -c /home/amisher/AmNet/src/net/threadpool.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.i: cmake_force
@@ -332,7 +345,7 @@ CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.s: cmake_force
 
 CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.o: CMakeFiles/AmNet_static.dir/flags.make
 CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.o: ../src/net/timerqueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.o -c /home/amisher/AmNet/src/net/timerqueue.cpp
 
 CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.i: cmake_force
@@ -350,6 +363,7 @@ AmNet_static_OBJECTS = \
 "CMakeFiles/AmNet_static.dir/src/http/filestat.cpp.o" \
 "CMakeFiles/AmNet_static.dir/src/http/httpparser.cpp.o" \
 "CMakeFiles/AmNet_static.dir/src/http/httpresponse.cpp.o" \
+"CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.o" \
 "CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.o" \
 "CMakeFiles/AmNet_static.dir/src/http/route.cpp.o" \
 "CMakeFiles/AmNet_static.dir/src/http/router.cpp.o" \
@@ -376,6 +390,7 @@ lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/filehandler.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/filestat.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/httpparser.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/httpresponse.cpp.o
+lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/matcher.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/route.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/http/router.cpp.o
@@ -395,7 +410,7 @@ lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/net/threadpool.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/src/net/timerqueue.cpp.o
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/build.make
 lib/libAmNet.a: CMakeFiles/AmNet_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX static library lib/libAmNet.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amisher/AmNet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX static library lib/libAmNet.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/AmNet_static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AmNet_static.dir/link.txt --verbose=$(VERBOSE)
 

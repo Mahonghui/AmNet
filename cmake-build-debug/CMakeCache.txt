@@ -20,6 +20,9 @@ AmNet_BINARY_DIR:STATIC=/home/amisher/AmNet/cmake-build-debug
 //Value Computed by CMake
 AmNet_SOURCE_DIR:STATIC=/home/amisher/AmNet
 
+//Dependencies for the target
+AmNet_shared_LIB_DEPENDS:STATIC=general;pthread;general;pthread;
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 

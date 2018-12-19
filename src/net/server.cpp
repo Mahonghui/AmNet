@@ -5,8 +5,10 @@
 
 #include <string.h>
 #include <functional>
+#include <netinet/in.h>
 #include "server.h"
 #include "util.h"
+#include "loopthread.h"
 #include "threadpool.h"
 #include "eventbase.h"
 

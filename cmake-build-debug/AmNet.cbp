@@ -230,6 +230,13 @@
 		<Unit filename="/home/amisher/AmNet/src/http/httpresponse.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/httpserver.cpp">
+			<Option target="AmNet_shared"/>
+			<Option target="AmNet_static"/>
+		</Unit>
+		<Unit filename="/home/amisher/AmNet/src/http/httpserver.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
 		<Unit filename="/home/amisher/AmNet/src/http/matcher.cpp">
 			<Option target="AmNet_shared"/>
 			<Option target="AmNet_static"/>

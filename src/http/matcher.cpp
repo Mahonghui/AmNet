@@ -45,9 +45,9 @@ void Matcher::InitPattern(std::string& pattern) {
     }
     // xx{name: [0-9]+}yy --> xx([0-9]+)yy
     unsigned int end = 0;
-    for(int i=0; i<indexes.size(); i += 2){
+    for(unsigned int i=0; i<indexes.size(); i += 2){
         std::string r = pattern.substr(end, indexes[i]-end);
-        end = (unsigned)indexes[i+1];
+        end = indexes[i+1];
 
         pattern_.append(r);
 

@@ -10,6 +10,7 @@
 #include <memory>
 #include <mutex>
 #include <condition_variable>
+#include <functional>
 #include <thread>
 #include "logbuf.h"
 
@@ -31,7 +32,7 @@ public:
         is_running_ = false;
         // 通知将剩余内容输出
         condition_.notify_one();
-        // 阻塞当前线程，直到和×this绑定的线程处理完毕
+        // 阻塞当前线程，直到和this绑定的线程处理完毕
         // 由于使用单线程，也就是等自己处理完毕在再结束
         thread_.join();
     }

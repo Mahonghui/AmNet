@@ -7,7 +7,8 @@
 
 LogFile::LogFile(const std::string &filename, int flush_every_t):
 filename_(filename), flush_every_t_(flush_every_t),count_(0){
-    file_= std::make_unique<File>(filename);
+    //file_= std::make_unique<File>(filename);
+    file_.reset(new File(filename));
 }
 
 void LogFile::Append(const char *str, size_t len) {

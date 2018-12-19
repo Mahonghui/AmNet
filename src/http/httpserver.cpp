@@ -31,3 +31,43 @@ default_handler_(PageNotFoundHandler){
 void HttpServer::Start() {server_.Start();}
 
 
+void HttpServer::WhenConnect(const std::shared_ptr<Connection> &conn) {
+    conn->SetContext((Any)HttpParser());
+}
+
+void HttpServer::WhenMessage(const std::shared_ptr<Connection> &conn, IOBuffer *buffer, TimeStamp t) {
+    auto parser = any_cast<HttpParser>(conn->GetMutableContext());
+
+    bool ret = parser->ParseRequest(buffer, t);
+    if(!ret){
+        conn->Send("HTTP/1.1 Bad Request \r\n\r\n");
+        conn->Shutdown();
+    }
+
+    if(parser->IsFinished()){
+        // 处理完毕后重置解析器状态
+        WhenRequest(conn,parser->GetRequest());
+    }
+}
+
+void HttpServer::WhenRequest(const std::shared_ptr<Connection> &conn, HttpRequest &request) {
+    std::string conn_str = request.GetHeader("Connection");
+    bool is_close = (conn_str == "close") || (request.GetVerison() == HttpRequest::Version::HTTP10 && conn_str != "keep-alive");
+
+    HttpResponse response(is_close);
+    std::unordered_map<std::string, std::string> dict;
+    auto handler = router_.Match(request, &dict);
+    if(handler){
+        handler(request, dict, &response);
+    } else{
+        default_handler_(request, dict, &response);
+    }
+
+    conn->Send(response.GetBuffer());
+
+    // 不是长连接
+    if(!response.GetCloseConn()){
+        conn->Shutdown();
+    }
+
+}

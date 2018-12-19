@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/amisher/AmNet/src/http/filestat.cpp" "/home/amisher/AmNet/cmake-build-debug/CMakeFiles/AmNet_shared.dir/src/http/filestat.cpp.o"
   "/home/amisher/AmNet/src/http/httpparser.cpp" "/home/amisher/AmNet/cmake-build-debug/CMakeFiles/AmNet_shared.dir/src/http/httpparser.cpp.o"
   "/home/amisher/AmNet/src/http/httpresponse.cpp" "/home/amisher/AmNet/cmake-build-debug/CMakeFiles/AmNet_shared.dir/src/http/httpresponse.cpp.o"
+  "/home/amisher/AmNet/src/http/httpserver.cpp" "/home/amisher/AmNet/cmake-build-debug/CMakeFiles/AmNet_shared.dir/src/http/httpserver.cpp.o"
   "/home/amisher/AmNet/src/http/matcher.cpp" "/home/amisher/AmNet/cmake-build-debug/CMakeFiles/AmNet_shared.dir/src/http/matcher.cpp.o"
   "/home/amisher/AmNet/src/http/route.cpp" "/home/amisher/AmNet/cmake-build-debug/CMakeFiles/AmNet_shared.dir/src/http/route.cpp.o"
   "/home/amisher/AmNet/src/http/router.cpp" "/home/amisher/AmNet/cmake-build-debug/CMakeFiles/AmNet_shared.dir/src/http/router.cpp.o"

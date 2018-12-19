@@ -2,12 +2,13 @@
 // Created by amisher on 18-12-15.
 //
 #include <cstdlib>
+#include <string>
 #include "iobuffer.h"
 #include "httpparser.h"
 
 bool HttpParser::ParseReqLine(const char *start, const char *end){
     const char* ptr = start;
-    const char* space = std::find(start, end,' ');
+    const char* space = std::find(ptr, end,' ');
 
     const char* question;
     const char* ampersand;
@@ -20,7 +21,7 @@ bool HttpParser::ParseReqLine(const char *start, const char *end){
         // 形如 GET http://www.seu.edu.cn/xxx/yyy?k1=v1&k2=v2 HTTP/1.1
         switch (request_state_) {
             case PARSE_REQUEST_LINE_METHOD:
-                if(space != end && request_.SetMethod(start, space))
+                if(space != end && request_.SetMethod(ptr, space))
                 {
                     request_state_ = PARSE_REQUEST_LINE_URL;
                     break;
@@ -30,33 +31,33 @@ bool HttpParser::ParseReqLine(const char *start, const char *end){
 
                 // 解析域名和参数
             case PARSE_REQUEST_LINE_URL:
-                start = space+1;
-                space = std::find(start, end, ' ');
+                ptr = space+1;
+                space = std::find(ptr, end, ' ');
                 if(space != end)
                 {
                     // 分割路径
-                    question = std::find(start, space, '?');
+                    question = std::find(ptr, space, '?');
                     if(question != space) {
-                        request_.SetPath(start, question);
-                        start = question + 1;
+                        request_.SetPath(ptr, question);
+                        ptr = question + 1;
                         // 遍历请求参数
-                        while ((ampersand = std::find(start, space, '&')) != space) {
-                            equal = std::find(start, ampersand, '=');
+                        while ((ampersand = std::find(ptr, space, '&')) != space) {
+                            equal = std::find(ptr, ampersand, '=');
                             if (equal != ampersand)
-                                request_.AddQuery(start, equal, ampersand);
-                            start = ampersand + 1;
+                                request_.AddQuery(ptr, equal, ampersand);
+                            ptr = ampersand + 1;
 
                         }
                         //  处理最后一对键值
-                        if (start != space) {
-                            equal = std::find(start, space, '=');
+                        if (ptr != space) {
+                            equal = std::find(ptr, space, '=');
                             if (equal != space)
-                                request_.AddQuery(start, equal, space);
+                                request_.AddQuery(ptr, equal, space);
                         }
                     }
                     else
                         // 没有URL参数
-                        request_.SetPath(start, space);
+                        request_.SetPath(ptr, space);
                     request_state_ = PARSE_REQUEST_LINE_VERSION;
                     break;
                 } else
@@ -64,18 +65,21 @@ bool HttpParser::ParseReqLine(const char *start, const char *end){
 
                 // 解析http版本
             case PARSE_REQUEST_LINE_VERSION:
-                start = space+1;
+                ptr = space+1;
                 // 检查是否符合“HTTP/1.*”, 暂不支持HTTP/2.0
-                succeed = (end - start == 8 && std::equal(start, end-1, "HTTP/1."));
+                succeed = (end - ptr == 8 && std::equal(ptr, end-1, "HTTP/1."));
                 if(succeed)
                 {
                     if(*(end-1) == '1')
                         request_.SetVersion(HttpRequest::HTTP11);
-                    else if(*(end-1) == '0')
+                    else if(*(end-1) == '0') {
                         request_.SetVersion(HttpRequest::HTTP10);
-                        else
-                            request_.SetVersion(HttpRequest::UNKNOWN);
-                        request_state_ = PARSE_ERQUEST_LINE_FINISH;
+                    }else
+                    {
+                        request_.SetVersion(HttpRequest::UNKNOWN);
+                    }
+
+                    request_state_ = PARSE_ERQUEST_LINE_FINISH;
                     break;
                 } else
                     return false;
@@ -88,7 +92,7 @@ bool HttpParser::ParseReqLine(const char *start, const char *end){
     return true;
 }
 
-bool HttpParser::ParseReqest(IOBuffer *buffer, TimeStamp t) {
+bool HttpParser::ParseRequest(IOBuffer *buffer, TimeStamp t) {
     bool more_things = true;
     const char* crlf;
 
@@ -134,7 +138,7 @@ bool HttpParser::ParseReqest(IOBuffer *buffer, TimeStamp t) {
                             parse_state_ = PARSE_STATE_ALL;
                             more_things = false;
                         } else{
-                            body_len_ = atoi(request_.GetHeader("Content-Length"));
+                            body_len_ = (size_t)stoi(request_.GetHeader("Content-Length"));
                             parse_state_ = PARSE_STATE_BODY;
                         }
                     }

@@ -20,7 +20,7 @@ public:
 private:
     // 新创建线程执行的函数， 也就是开启looper
     void ThreadFunc();
-    Loooper *loop_;
+    Looper *loop_;
     std::thread thread_;
 
     std::mutex mutex_;

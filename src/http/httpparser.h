@@ -29,7 +29,7 @@ public:
 
     HttpParser():parse_state_(PARSE_STATE_REQUESTLINE), request_state_(PARSE_REQUEST_LINE_METHOD),body_len_(0){}
     ~HttpParser()= default;
-    bool ParseReqest(IOBuffer* buf, TimeStamp t);
+    bool ParseRequest(IOBuffer* buf, TimeStamp t);
     bool IsFinished()const { return parse_state_ == PARSE_STATE_ALL;}
 
     void Reset(){
@@ -40,7 +40,7 @@ public:
         request_.Swap(nothing);
     }
 
-    HttpRequest& GetRequest() const { return request_;}
+    HttpRequest& GetRequest()  { return request_;}
 
 
 private:

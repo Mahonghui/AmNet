@@ -332,6 +332,36 @@ src/http/httpresponse.cpp.s:
 	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/http/httpresponse.cpp.s
 .PHONY : src/http/httpresponse.cpp.s
 
+src/http/httpserver.o: src/http/httpserver.cpp.o
+
+.PHONY : src/http/httpserver.o
+
+# target to build an object file
+src/http/httpserver.cpp.o:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/http/httpserver.cpp.o
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.o
+.PHONY : src/http/httpserver.cpp.o
+
+src/http/httpserver.i: src/http/httpserver.cpp.i
+
+.PHONY : src/http/httpserver.i
+
+# target to preprocess a source file
+src/http/httpserver.cpp.i:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/http/httpserver.cpp.i
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.i
+.PHONY : src/http/httpserver.cpp.i
+
+src/http/httpserver.s: src/http/httpserver.cpp.s
+
+.PHONY : src/http/httpserver.s
+
+# target to generate assembly for a file
+src/http/httpserver.cpp.s:
+	$(MAKE) -f CMakeFiles/AmNet_shared.dir/build.make CMakeFiles/AmNet_shared.dir/src/http/httpserver.cpp.s
+	$(MAKE) -f CMakeFiles/AmNet_static.dir/build.make CMakeFiles/AmNet_static.dir/src/http/httpserver.cpp.s
+.PHONY : src/http/httpserver.cpp.s
+
 src/http/matcher.o: src/http/matcher.cpp.o
 
 .PHONY : src/http/matcher.o
@@ -871,6 +901,9 @@ help:
 	@echo "... src/http/httpresponse.o"
 	@echo "... src/http/httpresponse.i"
 	@echo "... src/http/httpresponse.s"
+	@echo "... src/http/httpserver.o"
+	@echo "... src/http/httpserver.i"
+	@echo "... src/http/httpserver.s"
 	@echo "... src/http/matcher.o"
 	@echo "... src/http/matcher.i"
 	@echo "... src/http/matcher.s"
