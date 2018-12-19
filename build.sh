@@ -3,7 +3,7 @@
 # 显示指令
 set -x
 # 删除上次编译的文件
-rm -rf ./build
+sudo rm -rf ./build
 #新建一个目录，进入该目录
 mkdir build
 cd build
