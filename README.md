@@ -9,7 +9,7 @@ It utils network libs and IO multiplex tech in C++ to provide high performance.
 
 - 小根堆实现定时管理器，双缓冲机制保证异步日志
 
-- 使用HTTP有限状态机解析HTTP请求，支持HTTP长连接
+- 解析HTTP请求，支持HTTP长连接
 
 - HTTP服务器支持URL路由分发以及静态资源访问.
 
