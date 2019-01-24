@@ -14,7 +14,7 @@ class LooperThread;
 class ThreadPool{
 public:
     ThreadPool(Looper* base_loop, int threads_num);
-    ~ThreadPool()= default;
+    ~ThreadPool();
 
     void Start();
 

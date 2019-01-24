@@ -11,6 +11,8 @@ base_loop_(base_loop),
 threads_num_(threads_num),
 next_(0){}
 
+ThreadPool::~ThreadPool()=default;
+
 // 启动线程池，创建num个loop_thread放进线程池
 void ThreadPool::Start() {
     for(int i=0; i<threads_num_;i++)
@@ -20,6 +22,7 @@ void ThreadPool::Start() {
         looper_threads_.push_back(std::move(t));
     }
 }
+
 
 Looper* ThreadPool::Consume() {
     Looper* loop = base_loop_;
