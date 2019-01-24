@@ -48,7 +48,7 @@ public:
 
     // getter
     int getFd() const { return  fd_;}
-    int getEvents(){ return events_;}
+    int getEvents() const{ return events_;}
     bool isWriting() const { return (bool)events_ & EPOLLOUT;}
 
 private:

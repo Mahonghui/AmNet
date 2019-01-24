@@ -6,11 +6,10 @@
 #include "logger.h"
 
 EventBase::EventBase(int fd):fd_(fd), events_(EPOLLRDHUP), retevent_(0){}
-EventBase::~EventBase(){}
-
+EventBase::~EventBase()=default;
 void EventBase::EventHanlder() {
 
-    if((retevent_&EPOLLHUP) && !(retevent_&EPOLLIN  ))
+    if((retevent_ & EPOLLHUP) && !(retevent_& EPOLLIN))
     {
         //服务端异常
         if(close_callback_)
@@ -19,7 +18,7 @@ void EventBase::EventHanlder() {
     }
 
     // 客户端断开连接
-    if(retevent_&EPOLLRDHUP)
+    if(retevent_ & EPOLLRDHUP)
     {
         if(close_callback_)
             close_callback_();

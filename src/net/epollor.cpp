@@ -24,7 +24,7 @@ Epollor::~Epollor() {
     util::Close(epoll_fd_);
 }
 
-void Epollor::Add(std::shared_ptr <EventBase>& eb) {
+void Epollor::Add(std::shared_ptr<EventBase> eb) {
 
     int fd = eb->getFd();
     struct epoll_event event;
@@ -33,7 +33,7 @@ void Epollor::Add(std::shared_ptr <EventBase>& eb) {
 
     fd2eb[fd] = eb;
     // 注册到epoll事件表
-    if(epoll_ctl(epoll_fd_,EPOLL_CTL_ADD, fd, &event) < 0)
+    if(epoll_ctl(epoll_fd_, EPOLL_CTL_ADD, fd, &event) < 0)
     {
         // 注册失败
         LOG_ERROR<<"fail to invoke epoll_ctl[ADD]";
@@ -41,7 +41,7 @@ void Epollor::Add(std::shared_ptr <EventBase>& eb) {
     }
 }
 
-void Epollor::Mod(std::shared_ptr <EventBase>& eb) {
+void Epollor::Mod(std::shared_ptr <EventBase> eb) {
     int fd = eb->getFd();
     struct epoll_event event;
     event.events = (uint32_t)eb->getEvents();
@@ -55,7 +55,7 @@ void Epollor::Mod(std::shared_ptr <EventBase>& eb) {
 
 }
 
-void Epollor::Del(std::shared_ptr <EventBase>& eb) {
+void Epollor::Del(std::shared_ptr <EventBase> eb) {
     int fd = eb->getFd();
     struct epoll_event event;
     event.events = (uint32_t)eb->getEvents();
