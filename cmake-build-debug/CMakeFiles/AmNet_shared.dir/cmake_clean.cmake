@@ -23,7 +23,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AmNet_shared.dir/src/net/threadpool.cpp.o"
   "CMakeFiles/AmNet_shared.dir/src/net/timerqueue.cpp.o"
   "lib/libAmNet.pdb"
-  "lib/libAmNet.so"
+  "lib/libAmNet.dylib"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -Wall -O0 -g -ggdb   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/amisher/AmNet/src/base -I/home/amisher/AmNet/src/http -I/home/amisher/AmNet/src/log -I/home/amisher/AmNet/src/net 
+CXX_INCLUDES = -I/Users/mahonghui/CLionProjects/AmNet/src/base -I/Users/mahonghui/CLionProjects/AmNet/src/http -I/Users/mahonghui/CLionProjects/AmNet/src/log -I/Users/mahonghui/CLionProjects/AmNet/src/net 
 

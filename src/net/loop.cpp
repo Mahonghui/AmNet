@@ -30,6 +30,7 @@ Looper::~Looper()=default;
 
 void Looper::Start() {
     std::vector<std::shared_ptr<EventBase>> active_eb_list;
+    // 开始循环事件的 监听-处理-等待
     while (!exit_)
     {
         active_eb_list.clear();
@@ -66,6 +67,7 @@ void Looper::RunTask(Looper::Task &&t) {
 }
 
 void Looper::AddTask(Looper::Task &&t) {
+
     {
         std::unique_lock<std::mutex> lock(mutex_);
         task_queue_.emplace_back(std::move(t));
@@ -78,8 +80,10 @@ void Looper::AddTask(Looper::Task &&t) {
 
 void Looper::HandleTask() {
     is_handling_task_ = true;
+
     std::vector<Task > tasks;
     {
+        // 临界区域，退出区块后自动释放锁
         std::unique_lock<std::mutex> lock(mutex_);
         tasks.swap(task_queue_);
     }
@@ -93,6 +97,7 @@ void Looper::HandleTask() {
     is_handling_task_ = false;
 }
 
+// 将一个 <任务，执行间隔> 添加到定时器队列上，非线程安全
 void Looper::RunTaskAfter(Looper::Task &&t, Nanosecond interval) {
     timer_queue_->AddTimer(t, system_clock::now()+interval);
 }

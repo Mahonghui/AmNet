@@ -9,6 +9,7 @@
 
 class IOBuffer;
 
+// 解析成 HttpRequest
 class HttpParser{
 
 public:

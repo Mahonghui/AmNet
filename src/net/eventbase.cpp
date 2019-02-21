@@ -11,7 +11,7 @@ void EventBase::EventHanlder() {
 
     if((retevent_ & EPOLLHUP) && !(retevent_& EPOLLIN))
     {
-        //服务端异常
+        //EPOLLHUP 不代表正常的关闭，而是服务器错误
         if(close_callback_)
             close_callback_();
         return;
@@ -20,6 +20,7 @@ void EventBase::EventHanlder() {
     // 客户端断开连接
     if(retevent_ & EPOLLRDHUP)
     {
+        // EPOLLRDHUP 对端关闭连接
         if(close_callback_)
             close_callback_();
         return;

@@ -31,12 +31,16 @@ private:
     void InitPattern(std::string& pattern);
 
     bool valid_;
+
     //进行匹配的类型
     RegexType regex_type_;
+
     // 对头部或query匹配时的key
     std::string key_;
+
     // 正则模式
     std::string pattern_;
+
     // 匹配结果
     std::vector<std::string> regex_names_;
 

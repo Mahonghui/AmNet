@@ -13,6 +13,8 @@ const int EVENTS_MAX = 4096;
 // wait超时时间
 const int EPOLL_WAIT_TIME = 10000;
 
+
+// 创建一个类对象，在内核创建一张内核事件表
 Epollor::Epollor(): epoll_fd_(epoll_create1(EPOLL_CLOEXEC)), active_event_(EVENTS_MAX) {
     if(epoll_fd_ < 0)
     {

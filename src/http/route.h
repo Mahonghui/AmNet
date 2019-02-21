@@ -11,6 +11,7 @@
 #include "matcher.h"
 #include "httpresponse.h"
 
+// 一个 route 是 多条匹配规则 的集合
 class Route:public std::enable_shared_from_this<Route>{
 public:
     using  Handler = std::function<void(const HttpRequest&, std::unordered_map<std::string, std::string>&, HttpResponse*)>;

@@ -11,6 +11,9 @@
 
 class Looper;
 
+// LooperThread 把 Looper 和 线程绑定在一起
+// 创建一个该类对象，就创建一个线程，并运行着一个 looper
+// 所有这些线程由 threadpool 管理
 class LooperThread{
 public:
     LooperThread();

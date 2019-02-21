@@ -8,362 +8,358 @@
 		<Option virtualFolders="CMake Files\;CMake Files\example\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/strip">
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="AmNet_shared">
-				<Option output="/home/amisher/AmNet/cmake-build-debug/lib/libAmNet.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/amisher/AmNet/src/base"/>
-					<Add directory="/home/amisher/AmNet/src/http"/>
-					<Add directory="/home/amisher/AmNet/src/log"/>
-					<Add directory="/home/amisher/AmNet/src/net"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_shared"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AmNet_shared/fast">
-				<Option output="/home/amisher/AmNet/cmake-build-debug/lib/libAmNet.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/amisher/AmNet/src/base"/>
-					<Add directory="/home/amisher/AmNet/src/http"/>
-					<Add directory="/home/amisher/AmNet/src/log"/>
-					<Add directory="/home/amisher/AmNet/src/net"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_shared/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
+			<Target title="install/strip">
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AmNet_static">
-				<Option output="/home/amisher/AmNet/cmake-build-debug/lib/libAmNet.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/amisher/AmNet/src/base"/>
-					<Add directory="/home/amisher/AmNet/src/http"/>
-					<Add directory="/home/amisher/AmNet/src/log"/>
-					<Add directory="/home/amisher/AmNet/src/net"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_static"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AmNet_static/fast">
-				<Option output="/home/amisher/AmNet/cmake-build-debug/lib/libAmNet.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/amisher/AmNet/src/base"/>
-					<Add directory="/home/amisher/AmNet/src/http"/>
-					<Add directory="/home/amisher/AmNet/src/log"/>
-					<Add directory="/home/amisher/AmNet/src/net"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_static/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/amisher/AmNet/cmake-build-debug"/>
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/amisher/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AmNet_static">
+				<Option output="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/lib/libAmNet.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/base"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/http"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/log"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/net"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_static"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AmNet_static/fast">
+				<Option output="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/lib/libAmNet.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/base"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/http"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/log"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/net"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_static/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AmNet_shared">
+				<Option output="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/lib/libAmNet.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/base"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/http"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/log"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/net"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_shared"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AmNet_shared/fast">
+				<Option output="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/lib/libAmNet.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/base"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/http"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/log"/>
+					<Add directory="/Users/mahonghui/CLionProjects/AmNet/src/net"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmNet_shared/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mahonghui/CLionProjects/AmNet/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/amisher/AmNet/src/base/anyone.h">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/base/anyone.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/base/timestamp.h">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/base/timestamp.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/base/util.cpp">
-			<Option target="AmNet_shared"/>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/base/util.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/base/util.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/filehandler.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/base/util.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/filehandler.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/filehandler.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/filestat.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/filehandler.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/filestat.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/filestat.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/httpparser.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/filestat.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/httpparser.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/httpparser.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/httprequest.h">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/httpparser.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/httpresponse.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/httprequest.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/httpresponse.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/httpresponse.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/httpserver.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/httpresponse.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/httpserver.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/httpserver.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/matcher.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/httpserver.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/matcher.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/matcher.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/route.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/matcher.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/route.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/route.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/router.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/route.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/router.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/http/router.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/asynclogger.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/http/router.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/asynclogger.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/asynclogger.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/logbuf.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/asynclogger.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/logbuf.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/logbuf.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/logfile.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/logbuf.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/logfile.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/logfile.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/logger.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/logfile.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/logger.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/logger.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/util.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/logger.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/util.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/log/util.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/connection.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/log/util.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/connection.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/connection.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/epollor.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/connection.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/epollor.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/epollor.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/eventbase.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/epollor.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/eventbase.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/eventbase.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/eventbase.h">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/iobuffer.cpp">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/iobuffer.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/iobuffer.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/loop.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/iobuffer.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/loop.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/loop.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/loopthread.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/loop.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/loopthread.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/loopthread.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/server.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/loopthread.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/server.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/server.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/threadpool.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/server.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/threadpool.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/threadpool.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/timer.h">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/threadpool.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/timerqueue.cpp">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/timer.h">
 			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/timerqueue.cpp">
 			<Option target="AmNet_static"/>
-		</Unit>
-		<Unit filename="/home/amisher/AmNet/src/net/timerqueue.h">
 			<Option target="AmNet_shared"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/CMakeLists.txt">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/src/net/timerqueue.h">
+			<Option target="AmNet_shared"/>
+		</Unit>
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/amisher/AmNet/example/CMakeLists.txt">
+		<Unit filename="/Users/mahonghui/CLionProjects/AmNet/example/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\example\"/>
 		</Unit>
 	</Project>
