@@ -1,5 +1,7 @@
-AmNet is a multi-thread http server based on Reactor pattern.
-It utils network libs and IO multiplex tech in C++ to provide high performance.
+AmNet 是一个基于 Reactor 事件驱动模型的网络库。
+它使用 IO 复用技术提供高效的网络连接管理。
+
+架构借鉴 muduo 网络库
 
 **Feature**
 
