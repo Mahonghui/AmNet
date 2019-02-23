@@ -32,6 +32,7 @@ void HttpServer::Start() {server_.Start();}
 
 
 void HttpServer::WhenConnect(const std::shared_ptr<Connection> &conn) {
+    // 为每个连接分配一个 parser，避免获取主线程的parser，导致不可重入
     conn->SetContext((Any)HttpParser());
 }
 

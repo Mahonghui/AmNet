@@ -56,6 +56,7 @@ public:
 
 private:
     Looper* loop_;
+    // accept fd
     const int sock_fd_;
     std::shared_ptr<EventBase> conn_eb_;
 

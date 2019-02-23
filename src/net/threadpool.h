@@ -28,6 +28,7 @@ private:
     // 要取出的下一个位置
     int next_;
 
+    // 线程池
     std::vector<std::unique_ptr<LooperThread>> looper_threads_;
     std::vector<Looper*> loopers_;
 };
