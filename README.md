@@ -9,9 +9,9 @@ AmNet 是一个基于 Reactor 事件驱动模型的网络库。
 
 - 基于Reactor模式，线程池负责处理IO请求
 
-- 小根堆实现定时管理器，双缓冲机制保证异步日志
+- 简单应用 std::thread 库和 std::chrono 库
 
-- 解析HTTP请求，支持HTTP长连接
+- 使用智能指针和 RAII 机制管理生命周期
 
 - HTTP服务器支持URL路由分发以及静态资源访问.
 
